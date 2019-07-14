@@ -1,4 +1,4 @@
-package com.example.shoppinglistapplication.Fragments
+package com.example.shoppinglistapplication.Views
 
 
 import android.os.Bundle
@@ -9,11 +9,13 @@ import android.view.ViewGroup
 
 import com.example.shoppinglistapplication.R
 
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class NewListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
+class MainFragment : Fragment() {
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -30,7 +32,7 @@ class NewListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false)
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
 
@@ -38,7 +40,7 @@ class NewListFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            NewListFragment().apply {
+            MainFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
